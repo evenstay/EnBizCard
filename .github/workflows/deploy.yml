@@ -30,8 +30,11 @@ jobs:
           image: image-name
           registry: ghcr.io
           githubOrg: override-org # optional
-          username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.GHCR_TOKEN }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          
+          #username: ${{ secrets.GHCR_USERNAME }}
+          #password: ${{ secrets.GHCR_TOKEN }}
 #      - name: Build and Push Docker Image
 #        uses: docker/build-push-action@v2
 #        with:
