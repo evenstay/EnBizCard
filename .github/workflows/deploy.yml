@@ -27,8 +27,9 @@ jobs:
       - name: Docker Build and Push
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: EnBizCard
+          image: enbizcard
           registry: ghcr.io
+          tags: latest
           githubOrg: override-org # optional
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
