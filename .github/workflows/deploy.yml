@@ -1,4 +1,4 @@
-name: Deploy Docker
+nname: Deploy Docker
 
 on:
   push:
@@ -27,7 +27,7 @@ jobs:
       - name: Docker Build and Push
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
-          image: image-name
+          image: EnBizCard
           registry: ghcr.io
           githubOrg: override-org # optional
           username: ${{ github.actor }}
